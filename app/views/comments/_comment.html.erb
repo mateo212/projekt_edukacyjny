@@ -1,0 +1,11 @@
+<%= div_for comment do %>
+  <h3>
+    <%= comment.name %> &lt;<%= comment.email %>&gt; said:
+    <% if @article.owned_by? current_user %>
+      <span class='actions'>
+        <%= link_to t('general.usuń'), [@article, comment], :confirm => t('general.czy_jesteś_pewien?'), :method => :delete, :remote => true %>
+      </span>
+    <% end %>
+  </h3>
+  <%= comment.body %>
+<% end %>

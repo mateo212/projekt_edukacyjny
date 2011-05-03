@@ -1,0 +1,15 @@
+<article>
+  <h3>
+    <%= link_to article.title, article %>
+    <% if article.owned_by? current_user %>
+      <div class='actions'>
+        <%= link_to t('general.edytuj'), edit_article_path(article) %>
+        <%= link_to t('general.usuń'), :method => :delete %>
+      </div>
+    <% end %>
+  </h3>
+  <% if article.tag_list.present? %>
+    <small>Tagi: <%= article.tag_list %></small>
+  <% end %>
+  <%= simple_format raw(article.body) %>
+</article>

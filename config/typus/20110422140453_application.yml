@@ -1,0 +1,54 @@
+# Typus Models Configuration File
+#
+# Use the README file as a reference to customize settings.
+
+Article:
+  fields:
+    default: title, body, published_at, excerpt, location, user_id, user
+    form: title, body, published_at, excerpt, location, user_id, user
+  order_by: 
+  relationships: base_tags, categories, comments, tag_taggings, taggings, tags, user
+  filters: created_at
+  search: title
+  application: ccjr-blog-acd7df1
+
+Category:
+  fields:
+    default: name
+    form: name
+  order_by: 
+  relationships: articles
+  filters: created_at
+  search: name
+  application: ccjr-blog-acd7df1
+
+Comment:
+  fields:
+    default: article_id, name, email, body, article
+    form: article_id, name, email, body, article
+  order_by: 
+  relationships: article
+  filters: created_at
+  search: name
+  application: ccjr-blog-acd7df1
+
+Profile:
+  fields:
+    default: user_id, name, birthday, bio, color, twitter, user
+    form: user_id, name, birthday, bio, color, twitter, user
+  order_by: 
+  relationships: user
+  filters: created_at
+  search: name
+  application: ccjr-blog-acd7df1
+
+User:
+  fields:
+    default: email
+    form: email, hashed_password
+  order_by: 
+  relationships: articles, profile, replies
+  filters: created_at
+  search: 
+  application: ccjr-blog-acd7df1
+

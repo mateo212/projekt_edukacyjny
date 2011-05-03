@@ -1,0 +1,8 @@
+<html>
+<body>
+  <p>
+    Ktoś dodał komentarz do jednego z twoich artykułów: <i><%= @article.title %></i>.
+    Przejdź przeczytać komentarz: <%= link_to @article.title, article_url(@article, :host => 'localhost:3000') %>.
+  </p>
+</body>
+</html>

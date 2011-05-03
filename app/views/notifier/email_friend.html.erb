@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>
+  Jeden z twoich przyjaciół, <%= @sender_name %>,
+  uważa, iż ten artykuł powinien ci się spodobać.
+</p>
+
+<p>
+  Przejdź sprawdzić informację: <strong><%= @article.title %></strong> at
+  <%= article_url @article, :host => 'projektedukacyjny.heroku.com' %>
+</p>
+</body>
+</html>

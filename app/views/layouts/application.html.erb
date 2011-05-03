@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ZSS w Krakowie</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag 'jquery-1.4.2.min', 'rails', 'application' %>
+  <%= csrf_meta_tag %>
+  <meta charset="UTF-8">
+  <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <nav>
+  </nav>
+  <header>
+    <h1>ZSS w Krakowie</h1>
+    <div id="user_bar">
+      <% if logged_in? %>
+        <%= link_to t('articles.nowy_artykuł'), new_article_path %> |
+        <%= link_to t('users.zmień_hasło'), edit_user_path(current_user) %> |
+        <%= link_to t('sessions.wyloguj'), logout_path %>
+      <% end %>
+    </div>
+    <%= render 'articles/search' %>
+  </header>
+  <div class="column">
+    <%= content_tag(:p, notice, :class => 'notice') if notice.present? %>
+    <%= content_tag(:p, alert, :class => 'alert') if alert.present? %>
+    <%= yield %>
+  </div>
+
+  <div class= "kolumna">
+<h5>Lorem ipsum</h5>  
+  <p> 
+dolor sit amet, consectetur adipiscing elit. Aliquam porta interdum arcu, id hendrerit leo dignissim id. Proin sollicitudin lacinia metus eget blandit. Quisque rhoncus, odio ut suscipit bibendum, mi velit rutrum quam, et sollicitudin nisl felis id velit. Vivamus ut dolor ac nunc suscipit cursus a sit amet enim. Morbi sodales volutpat turpis, sed eleifend eros rhoncus vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec porta est hendrerit sem facilisis ultrices. Ut eu mi ut diam euismod pellentesque. Vivamus ut lacus mattis arcu facilisis imperdiet. Vivamus ultrices arcu eget ipsum vestibulum vel tincidunt dolor tristique. Ut a libero quis purus semper adipiscing at et tortor. Donec nunc ante, feugiat ut eleifend tempor, porttitor eu purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+  </p>
+  </div>
+  
+  <div class="footer">
+    <p>
+ &copy dolor sit amet, consectetur adipiscing elit. Aliquam porta interdum arcu, id hendrerit leo dignissim id. Proin sollicitudin lacinia metus eget blandit. Quisque rhoncus, odio ut suscipit bibendum, mi velit rutrum quam, et sollicitudin nisl felis id velit. Vivamus ut dolor ac nunc suscipit cursus a sit amet enim. Morbi sodales volutpat turpis, sed eleifend eros rhoncus vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec porta est hendrerit sem facilisis ultrices. Ut eu mi ut diam euismod pellentesque. Vivamus ut lacus mattis arcu facilisis imperdiet. Vivamus ultrices arcu eget ipsum vestibulum vel tincidunt dolor tristique. Ut a libero quis purus semper adipiscing at et tortor. Donec nunc ante, feugiat ut eleifend tempor, porttitor eu purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+    </p>
+  </div>
+</body>
+</html>

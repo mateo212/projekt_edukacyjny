@@ -1,0 +1,226 @@
+*{margin:0 auto;}
+.column {float: right; width:60%;padding:0 0%;;}
+.kolumna {float: left; width:10%;padding:0 5%;}
+.footer {clear: both;}
+@font-face
+{
+font-family:Diavlo;
+src:url('Diavlo_BLACK_II_37.otf')
+}
+
+body { 
+  background: #169495;
+}
+
+body, p, ol, ul, td {
+font-family: 'Merriweather', arial, serif; 
+  font-size:   12px;
+  line-height: 18px;
+}
+h2{
+	color:#1bd377;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+p {
+  padding: 5px;
+}
+
+a {
+  color:#7fdea9;
+  padding:0 2px;
+  text-decoration:none;
+}
+
+a:hover {
+  background-color:#d07c74;
+  color:#061832;
+}
+
+.notice { color: yellow; }
+.alert  { color: red; }
+
+header {
+  font-family:Diavlo;
+  letter-spacing: 1px;
+  border-bottom: 5px solid #262744;
+  color:#1bd377;
+  padding: 15px 0;
+  height: 35px;
+}
+
+header #user_bar {
+  float: right;
+  font-size: 10px;
+}
+
+.footer {
+  border-top: 5px solid #262744;
+  margin-top: 10px;
+  clear:both;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 11px;
+}
+
+header h1 {
+  padding-top: 14px;
+  float: left;
+  font-size: 30px;
+  margin-left:5%;
+}
+
+header h1 a{
+  color: #FFFFFF;
+}
+
+header h1 a:hover {
+  background-color: white;
+  color: black;
+  border-bottom: 4px solid #ccc;
+}
+
+header p {
+  float: right;
+}
+
+section h1 {
+  font-size: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 10px;
+}
+
+section table{
+  margin: 0;
+}
+
+section form{
+  text-align: left;
+}
+
+section form br{
+  display: none;
+  float: left;
+}
+
+section form label {
+  width: 150px;
+  display: block;
+  text-align: right;
+  padding-right: 10px;
+  float: left;
+  line-height: 21px;
+  background-color: #2bd7ef;
+  border: 2px solid #339486;
+  margin-right: 10px;
+}
+
+section form label.check_box_label {
+  width: auto;
+  display: inline;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 21px;
+  background-color: #FFF;  
+  border: none;
+}
+
+section form .field, section form .actions {
+  padding-top: 10px;
+  clear: both;
+}
+
+section form input[type=text], section form input[type=password], section form textarea {
+  float: left;
+  font-size: 14px;
+  width: 250px;
+  padding: 2px;
+  border: 2px solid #000000;
+}
+
+section form input[type=checkbox] {
+  margin: 4px;
+  float: left;
+}
+
+section form textarea {
+  height: 150px;
+}
+
+section form input[type=submit] {
+  margin-left: 175px;
+  float:left;
+  margin-right: 100px;
+  margin-bottom: 10px;
+}
+
+section h3 {
+  padding-top: 10px;
+  height: 20px;
+}
+
+section h3 .actions{
+  display:none;
+  font-weight: normal;
+  font-size: 10px;
+}
+
+section h3:hover .actions{
+  display: inline;
+}
+
+.fieldWithErrors {
+  display:table;
+  float:left;
+  margin:0;
+  width:100px;
+  margin-right: 10px;
+}
+
+section form .fieldWithErrors label{
+  border: 2px solid red;
+  margin-right: 0px;
+}
+
+section form .fieldWithErrors input, section form .fieldWithErrors  textarea{
+  width: 250px;
+  border: 2px solid red;
+}
+
+#errorExplanation {
+  width: 413px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+  margin: 0;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
